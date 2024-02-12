@@ -14,9 +14,10 @@ const Button = ({
   disabled = false,
   activeOpacity = 0.8,
   backgroundColor,
-  color,
+  color = '#ffffff',
   testID,
   borderRadius,
+  center = true,
   style,
   titleStyle,
   ...rest
@@ -35,7 +36,11 @@ const Button = ({
     borderRadius && {borderRadius},
   ];
 
-  const buttonTextStyles = [styles.title, titleStyle];
+  const buttonTextStyles = [
+    styles.title,
+    titleStyle,
+    center && {textAlign: 'center'},
+  ];
 
   return (
     <RNTouchableOpacity
@@ -53,8 +58,15 @@ const Button = ({
 };
 
 const styles = StyleSheet.create({
-  button: {},
-  disabledButton: {},
+  button: {
+    backgroundColor: '#702963',
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    borderRadius: 5,
+  },
+  disabledButton: {
+    opacity: 0.4,
+  },
   title: {},
 });
 

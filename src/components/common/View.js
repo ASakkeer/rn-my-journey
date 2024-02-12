@@ -9,6 +9,7 @@ const View = ({
   flexDirection,
   height,
   width,
+  backgroundColor,
   testID,
   style,
   ...rest
@@ -22,6 +23,7 @@ const View = ({
     height && {height},
     width && {width},
     testID && {testID},
+    backgroundColor && {backgroundColor},
     style,
   ];
 

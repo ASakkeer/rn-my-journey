@@ -63,6 +63,10 @@ const TextInput = ({
 const styles = StyleSheet.create({
   input: {
     // Default input styles here
+    borderBottomWidth: 1,
+    borderBottomColor: '#702963',
+    paddingHorizontal: 10,
+    color: '#000000',
   },
 });
 

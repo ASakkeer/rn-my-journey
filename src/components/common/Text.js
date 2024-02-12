@@ -31,6 +31,7 @@ const Text = ({
 const styles = StyleSheet.create({
   text: {
     // Default text styles here
+    color: '#000000',
   },
 });
 
