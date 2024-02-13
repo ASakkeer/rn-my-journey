@@ -7,13 +7,19 @@ import {
   TextInput,
   View,
 } from './src/components/common';
+import {Header} from './src/components/layout';
 
 function App() {
   return (
-    <View flex={1} vPadding={15} hPadding={15} backgroundColor="#ffffff">
+    <View flex={1} backgroundColor="#ffffff">
+      <Header title="BANK EXPENSES" total={78658} />
       <Text>Hello</Text>
       <BreakSpace />
-      <Button title="Click Me" />
+      <Button>
+        <Text textCenter color="#ffffff">
+          Click Me
+        </Text>
+      </Button>
       <BreakSpace />
       <TextInput />
     </View>

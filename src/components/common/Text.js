@@ -6,7 +6,7 @@ const Text = ({
   fontSize,
   fontWeight,
   color,
-  textAlign,
+  textCenter,
   testID,
   style,
   ...rest
@@ -16,7 +16,7 @@ const Text = ({
     fontSize && {fontSize},
     fontWeight && {fontWeight},
     color && {color},
-    textAlign && {textAlign},
+    textCenter && {textAlign: 'center'},
     testID && {testID},
     style,
   ];

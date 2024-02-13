@@ -7,6 +7,23 @@ import Text from './Text';
 import TextInput from './TextInput';
 import View from './View';
 import BreakSpace from './BreakSpace';
+import {
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  FontAwesome5,
+  FontAwesome6,
+  Fontisto,
+  Foundation,
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+  Octicons,
+  SimpleLineIcons,
+  Zocial,
+} from './IconLibrary';
 
 export {
   Button,
@@ -18,4 +35,19 @@ export {
   TextInput,
   View,
   BreakSpace,
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  FontAwesome5,
+  FontAwesome6,
+  Fontisto,
+  Foundation,
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+  Octicons,
+  SimpleLineIcons,
+  Zocial,
 };

@@ -4,7 +4,6 @@ import {Text} from '.';
 
 const Button = ({
   onPress,
-  title,
   vPadding,
   hPadding,
   flex,
@@ -14,12 +13,12 @@ const Button = ({
   disabled = false,
   activeOpacity = 0.8,
   backgroundColor,
-  color = '#ffffff',
   testID,
   borderRadius,
   center = true,
   style,
   titleStyle,
+  children,
   ...rest
 }) => {
   const buttonStyles = [
@@ -50,9 +49,7 @@ const Button = ({
       testID={testID}
       style={buttonStyles}
       {...rest}>
-      <Text style={buttonTextStyles} color={color}>
-        {title}
-      </Text>
+      {children}
     </RNTouchableOpacity>
   );
 };
