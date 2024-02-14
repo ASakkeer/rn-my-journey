@@ -8,20 +8,21 @@ import {
   View,
 } from './src/components/common';
 import {Header} from './src/components/layout';
+import {WHITE} from './src/utils/colors';
 
 function App() {
   return (
-    <View flex={1} backgroundColor="#ffffff">
+    <View flex={1} backgroundColor={WHITE}>
       <Header title="BANK EXPENSES" total={78658} />
       <Text>Hello</Text>
       <BreakSpace />
       <Button>
-        <Text textCenter color="#ffffff">
-          Click Me
+        <Text textCenter color={WHITE}>
+          CLICK ME
         </Text>
       </Button>
       <BreakSpace />
-      <TextInput />
+      <TextInput borderWidth={1} borderRadius={50} />
     </View>
   );
 }

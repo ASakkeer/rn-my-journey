@@ -1,10 +1,17 @@
 import React from 'react';
 import {TextInput as RNTextInput, StyleSheet} from 'react-native';
+import {
+  DARK,
+  GREY_LIGHT,
+  GREY_MEDIUM,
+  GREY_X_LIGHT,
+  PRIMARY,
+} from '../../utils/colors';
 
 const TextInput = ({
   borderWidth,
   borderRadius,
-  borderColor,
+  borderColor = GREY_X_LIGHT,
   fontSize,
   vPadding,
   hPadding,
@@ -19,7 +26,7 @@ const TextInput = ({
   numberOfLines = 1,
   onChangeText = () => {},
   placeholder = '',
-  placeholderTextColor = '#999',
+  placeholderTextColor = GREY_MEDIUM,
   color,
   style,
   value,
@@ -64,9 +71,9 @@ const styles = StyleSheet.create({
   input: {
     // Default input styles here
     borderBottomWidth: 1,
-    borderBottomColor: '#702963',
-    paddingHorizontal: 10,
-    color: '#000000',
+    borderBottomColor: PRIMARY,
+    paddingHorizontal: 20,
+    color: DARK,
   },
 });
 
