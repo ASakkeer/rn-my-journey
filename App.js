@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {
   BreakSpace,
   Button,
@@ -7,23 +8,52 @@ import {
   TextInput,
   View,
 } from './src/components/common';
-import {Header} from './src/components/layout';
-import {WHITE} from './src/utils/colors';
+import {Card, Header} from './src/components/layout';
+import {PRIMARY_LIGHT, WHITE} from './src/utils/colors';
+
+const dummyData = [
+  {
+    id: 1,
+    title: 'HOME CHEF',
+    description: 'Paytm',
+    type: 'd',
+    value: '60',
+  },
+  {
+    id: 2,
+    title: 'PANNAYAAR',
+    description: 'GPay',
+    type: 'd',
+    value: '130',
+  },
+  {
+    id: 3,
+    title: 'BALAJI GAVE',
+    description: 'GPay',
+    type: 'c',
+    value: '2000',
+  },
+];
 
 function App() {
   return (
-    <View flex={1} backgroundColor={WHITE}>
-      <Header title="BANK EXPENSES" total={78658} />
-      <Text>Hello</Text>
-      <BreakSpace />
-      <Button>
-        <Text textCenter color={WHITE}>
-          CLICK ME
-        </Text>
-      </Button>
-      <BreakSpace />
-      <TextInput borderWidth={1} borderRadius={50} />
-    </View>
+    <SafeAreaProvider>
+      <View flex={1} backgroundColor={PRIMARY_LIGHT}>
+        <Header title="BANK EXPENSES" total={78658} />
+        <View vPadding={15} hPadding={15} flex={1}>
+          <View flex={1}>
+            {dummyData?.map(item => (
+              <Card itemData={item} key={item?.id} />
+            ))}
+          </View>
+          <Button>
+            <Text textCenter color={WHITE}>
+              CLICK ME
+            </Text>
+          </Button>
+        </View>
+      </View>
+    </SafeAreaProvider>
   );
 }
 

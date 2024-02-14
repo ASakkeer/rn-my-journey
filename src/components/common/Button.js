@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: PRIMARY,
     paddingVertical: 15,
     paddingHorizontal: 15,
-    borderRadius: 5,
+    borderRadius: 50,
   },
   disabledButton: {
     opacity: 0.4,
