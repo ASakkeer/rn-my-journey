@@ -70,10 +70,11 @@ const TextInput = ({
 const styles = StyleSheet.create({
   input: {
     // Default input styles here
-    borderBottomWidth: 1,
+    borderWidth: 1,
     borderBottomColor: PRIMARY,
     paddingHorizontal: 20,
     color: DARK,
+    borderRadius: 30,
   },
 });
 

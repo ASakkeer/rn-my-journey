@@ -1,5 +1,5 @@
-import React from 'react';
-import {Button, Text, View} from '../common';
+import React, {useState} from 'react';
+import {Button, ModalView, Text, TextInput, View} from '../common';
 import {Card, Header} from '../layout';
 import {PRIMARY_LIGHT, WHITE} from '../../utils/colors';
 
@@ -28,6 +28,8 @@ const dummyData = [
 ];
 
 function ListScreen() {
+  const [isVisible, setModalView] = useState(false);
+
   return (
     <View flex={1} backgroundColor={PRIMARY_LIGHT}>
       <Header title="BANK EXPENSES" total={78658} />
@@ -37,12 +39,15 @@ function ListScreen() {
             <Card itemData={item} key={item?.id} />
           ))}
         </View>
-        <Button>
+        {/* <Button onPress={() => setModalView(true)}>
           <Text textCenter color={WHITE}>
             CLICK ME
           </Text>
-        </Button>
+        </Button> */}
       </View>
+      {/* <ModalView isVisible={isVisible} title="SELECT EXPENSE TYPE">
+        <TextInput />
+      </ModalView> */}
     </View>
   );
 }

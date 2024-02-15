@@ -24,6 +24,7 @@ import {
   SimpleLineIcons,
   Zocial,
 } from './IconLibrary';
+import ModalView from './Modal';
 
 export {
   Button,
@@ -50,4 +51,5 @@ export {
   Octicons,
   SimpleLineIcons,
   Zocial,
+  ModalView,
 };
