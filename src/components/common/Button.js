@@ -35,12 +35,6 @@ const Button = ({
     borderRadius && {borderRadius},
   ];
 
-  const buttonTextStyles = [
-    styles.title,
-    titleStyle,
-    center && {textAlign: 'center'},
-  ];
-
   return (
     <RNTouchableOpacity
       onPress={onPress}

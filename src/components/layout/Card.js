@@ -27,7 +27,9 @@ const Card = React.memo(function Card({itemData, marginBottom = 10}) {
       hPadding={15}>
       <View flex={1}>
         <View style={styles.userInfo} row aCenter>
-          <Text color={PRIMARY}>{itemData?.title}</Text>
+          <Text numberOfLines={1} ellipsizeMode={'tail'} color={PRIMARY}>
+            {itemData?.title}
+          </Text>
         </View>
         <View row aCenter>
           <Text style={styles.balanceText}>{itemData?.description}</Text>
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
     borderColor: GREY_X_LIGHT,
     backgroundColor: WHITE,
     borderRadius: 5,
-    shadowColor: '#000',
+    shadowColor: GREY_MEDIUM,
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 3,
     shadowRadius: 2,
@@ -65,7 +67,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   balanceText: {
-    marginLeft: 5,
     color: GREY_MEDIUM,
     fontSize: 12,
   },
