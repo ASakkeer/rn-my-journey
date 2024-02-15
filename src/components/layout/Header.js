@@ -6,7 +6,7 @@ import {DARK, GREY_X_LIGHT, PRIMARY, WHITE} from '../../utils/colors';
 const Header = React.memo(function Header({
   isWelcome = false,
   title,
-  total = 0,
+  total = '--',
   onIconPress = () => {},
 }) {
   return (
