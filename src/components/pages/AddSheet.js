@@ -6,7 +6,7 @@ import {StyleSheet} from 'react-native';
 import {Text, View, Button, TextInput, ModalView} from '../common';
 
 // Importing color constants
-import {DARK, WHITE, PRIMARY} from '../../utils/colors';
+import {DARK, WHITE, PRIMARY, PRIMARY_LIGHT} from '../../utils/colors';
 
 // Importing constant values
 import {SIZES} from '../../utils/constant';
@@ -75,7 +75,7 @@ function AddSheet({showAddSheet, setAddSheetModal}) {
   // JSX rendering
   return (
     <ModalView isVisible={showAddSheet} flex={1}>
-      <View>
+      <View backgroundColor={PRIMARY_LIGHT}>
         {renderSheetTitle()}
         <View>
           {renderTextInput('TITLE', sheetData.title, value =>

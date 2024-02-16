@@ -22,3 +22,5 @@ export const GREY_XX_LIGHT = '#F2F2F2';
 export const SUCCESS = '#43A047';
 export const WARNING = '#EF6C00';
 export const DANGER = '#E53935';
+
+export const TRANSPARENT = 'transparent';

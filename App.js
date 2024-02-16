@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {AddSheet, ListScreen} from './src/components/pages';
+import {AddSheet, ListScreen, SheetList} from './src/components/pages';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +15,7 @@ function App() {
           screenOptions={{headerShown: false}}>
           <Stack.Screen name="ListScreen" component={ListScreen} />
           <Stack.Screen name="AddSheet" component={AddSheet} />
+          <Stack.Screen name="SheetList" component={SheetList} />
         </Stack.Navigator>
       </SafeAreaProvider>
     </NavigationContainer>

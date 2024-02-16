@@ -4,13 +4,18 @@ import {Card, Header, NoDataView} from '../layout';
 import {WHITE, PRIMARY_LIGHT} from '../../utils/colors';
 import {AddSheet} from '.';
 
-function ListScreen() {
+function ListScreen({navigation}) {
   const [expenceData, setExpenceData] = useState(null);
   const [showAddSheet, setAddSheetModal] = useState(false);
 
   return (
     <View flex={1} backgroundColor={PRIMARY_LIGHT}>
-      <Header isWelcome />
+      <Header
+        isWelcome
+        onIconPress={() => {
+          navigation.navigate('SheetList');
+        }}
+      />
       <View vPadding={15} hPadding={15} flex={1}>
         <View flex={1}>
           {expenceData?.map(item => (
