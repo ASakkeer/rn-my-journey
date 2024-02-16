@@ -16,6 +16,10 @@ const Button = ({
   testID,
   borderRadius,
   center = true,
+  mBottom,
+  mRight,
+  mLeft,
+  mTop,
   style,
   titleStyle,
   children,
@@ -33,6 +37,10 @@ const Button = ({
     width && {width},
     disabled && styles.disabledButton,
     borderRadius && {borderRadius},
+    mBottom && {marginBottom: mBottom},
+    mRight && {marginRight: mRight},
+    mLeft && {marginLeft: mLeft},
+    mTop && {marginTop: mTop},
   ];
 
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import Modal from 'react-native-modal';
 import {Text, View} from '.';
-import {WHITE, DARK, PRIMARY} from '../../utils/colors';
+import {WHITE, PRIMARY} from '../../utils/colors';
 import {FLEX_VALUES, SIZES} from '../../utils/constant';
 
 const _styles = StyleSheet.create({

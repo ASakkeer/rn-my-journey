@@ -13,6 +13,9 @@ const View = ({
   jCenter,
   aCenter,
   mBottom,
+  mRight,
+  mLeft,
+  mTop,
   testID,
   style,
   ...rest
@@ -30,6 +33,9 @@ const View = ({
     testID && {testID},
     backgroundColor && {backgroundColor},
     mBottom && {marginBottom: mBottom},
+    mRight && {marginRight: mRight},
+    mLeft && {marginLeft: mLeft},
+    mTop && {marginTop: mTop},
     style,
   ];
 

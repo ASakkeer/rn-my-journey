@@ -26,11 +26,12 @@ const TextInput = ({
   numberOfLines = 1,
   onChangeText = () => {},
   placeholder = '',
-  placeholderTextColor = GREY_MEDIUM,
+  placeholderTextColor = GREY_LIGHT,
   color,
   style,
   value,
   testID,
+  mBottom,
   ...rest
 }) => {
   const inputStyles = [
@@ -42,6 +43,7 @@ const TextInput = ({
     vPadding && {paddingVertical: vPadding},
     hPadding && {paddingHorizontal: hPadding},
     color && {color},
+    mBottom && {marginBottom: mBottom},
     style,
   ];
 
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     color: DARK,
     borderRadius: 30,
+    textTransform: 'uppercase',
   },
 });
 

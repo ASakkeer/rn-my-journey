@@ -1,35 +1,12 @@
 import React, {useState} from 'react';
-import {Button, ModalView, Text, TextInput, View} from '../common';
+import {Button, Text, View} from '../common';
 import {Card, Header, NoDataView} from '../layout';
-import {PRIMARY_LIGHT, WHITE} from '../../utils/colors';
-
-const dummyData = [
-  {
-    id: 1,
-    title: 'HOME CHEF',
-    description: 'Paytm',
-    type: 'd',
-    value: '60',
-  },
-  {
-    id: 2,
-    title: 'PANNAYAAR',
-    description: 'GPay',
-    type: 'd',
-    value: '130',
-  },
-  {
-    id: 3,
-    title: 'RAJ GIVE TO ME FOR THE TOKEN FROM THE PUGA',
-    description: 'GPay',
-    type: 'c',
-    value: '2000',
-  },
-];
+import {WHITE, PRIMARY_LIGHT} from '../../utils/colors';
+import {AddSheet} from '.';
 
 function ListScreen() {
   const [expenceData, setExpenceData] = useState(null);
-  // const [isVisible, setModalView] = useState(false);
+  const [showAddSheet, setAddSheetModal] = useState(false);
 
   return (
     <View flex={1} backgroundColor={PRIMARY_LIGHT}>
@@ -41,15 +18,18 @@ function ListScreen() {
           ))}
           {!expenceData && <NoDataView content="NO SHEET" />}
         </View>
-        <Button>
+        <Button onPress={() => setAddSheetModal(true)}>
           <Text textCenter color={WHITE}>
             CREATE NEW SHEET
           </Text>
         </Button>
       </View>
-      {/* <ModalView isVisible={isVisible} title="SELECT EXPENSE TYPE">
-        <TextInput />
-      </ModalView> */}
+      {showAddSheet && (
+        <AddSheet
+          showAddSheet={showAddSheet}
+          setAddSheetModal={setAddSheetModal}
+        />
+      )}
     </View>
   );
 }

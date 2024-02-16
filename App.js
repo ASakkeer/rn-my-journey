@@ -1,12 +1,23 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {ListScreen} from './src/components/pages';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {AddSheet, ListScreen} from './src/components/pages';
+
+const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <SafeAreaProvider>
-      <ListScreen />
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <SafeAreaProvider>
+        <Stack.Navigator
+          initialRouteName="ListScreen"
+          screenOptions={{headerShown: false}}>
+          <Stack.Screen name="ListScreen" component={ListScreen} />
+          <Stack.Screen name="AddSheet" component={AddSheet} />
+        </Stack.Navigator>
+      </SafeAreaProvider>
+    </NavigationContainer>
   );
 }
 
