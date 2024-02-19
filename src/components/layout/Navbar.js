@@ -1,18 +1,10 @@
 import React from 'react';
-import {View, Text, Button, MaterialIcons, Ionicons} from '../common';
+import {View, Text, Button, Ionicons} from '../common';
 import {StyleSheet} from 'react-native';
-import {
-  DARK,
-  GREY_X_LIGHT,
-  PRIMARY,
-  TRANSPARENT,
-  WHITE,
-} from '../../utils/colors';
+import {DARK, GREY_X_LIGHT, PRIMARY, TRANSPARENT} from '../../utils/colors';
 
 const Navbar = React.memo(function Navbar({
-  isWelcome = false,
   title,
-  total = '--',
   onIconPress = () => {},
   navigateToBack,
 }) {
@@ -28,11 +20,11 @@ const Navbar = React.memo(function Navbar({
           {title}
         </Text>
       </View>
-      <View jCenter>
+      {/* <View jCenter>
         <Button backgroundColor={TRANSPARENT} onPress={onIconPress}>
           <Ionicons name="ellipsis-vertical" size={18} color={DARK} />
         </Button>
-      </View>
+      </View> */}
     </View>
   );
 });

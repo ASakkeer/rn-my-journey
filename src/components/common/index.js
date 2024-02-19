@@ -25,6 +25,7 @@ import {
   Zocial,
 } from './IconLibrary';
 import ModalView from './Modal';
+import TouchableOpacity from './TouchableOpacity';
 
 export {
   Button,
@@ -52,4 +53,5 @@ export {
   SimpleLineIcons,
   Zocial,
   ModalView,
+  TouchableOpacity,
 };

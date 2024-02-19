@@ -16,6 +16,8 @@ const View = ({
   mRight,
   mLeft,
   mTop,
+  borderWidth,
+  borderColor,
   testID,
   style,
   ...rest
