@@ -16,6 +16,7 @@ const TouchableOpacity = ({
   height,
   width,
   backgroundColor,
+  mRight,
   children,
   ...rest
 }) => {
@@ -27,6 +28,7 @@ const TouchableOpacity = ({
     borderColor && {borderColor},
     vPadding && {paddingVertical: vPadding},
     hPadding && {paddingHorizontal: hPadding},
+    mRight && {marginRight: mRight},
     style,
   ];
 

@@ -4,9 +4,10 @@ import {Image as RNImage, StyleSheet} from 'react-native';
 const Image = ({
   source,
   resizeMode = 'cover',
-  width,
-  height,
+  width = 200,
+  height = 200,
   borderRadius,
+  borderWidth,
   testID,
   style,
   onError = () => {},
@@ -20,6 +21,7 @@ const Image = ({
     width && {width},
     height && {height},
     borderRadius && {borderRadius},
+    borderWidth && {borderWidth},
     testID && {testID},
     style,
   ];

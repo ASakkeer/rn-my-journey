@@ -9,6 +9,7 @@ const Text = ({
   color,
   textCenter,
   testID,
+  mBottom,
   style,
   ...rest
 }) => {
@@ -19,6 +20,7 @@ const Text = ({
     color && {color},
     textCenter && {textAlign: 'center'},
     testID && {testID},
+    mBottom && {marginBottom: mBottom},
     style,
   ];
 

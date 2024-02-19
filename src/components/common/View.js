@@ -18,6 +18,8 @@ const View = ({
   mTop,
   borderWidth,
   borderColor,
+  borderRadius,
+  opacity = 1,
   testID,
   style,
   ...rest
@@ -38,6 +40,10 @@ const View = ({
     mRight && {marginRight: mRight},
     mLeft && {marginLeft: mLeft},
     mTop && {marginTop: mTop},
+    borderWidth && {borderWidth},
+    borderColor && {borderColor},
+    borderRadius && {borderRadius},
+    opacity && {opacity},
     style,
   ];
 
