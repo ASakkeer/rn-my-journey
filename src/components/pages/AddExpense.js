@@ -174,7 +174,7 @@ function AddExpense({navigation}) {
   const renderSpentTo = () => (
     <View mBottom={15}>
       <TextInput
-        placeholder="SPENT TO"
+        placeholder="DESCRIPTION"
         onChangeText={text => handleFormAction('spentTo', text)}
       />
     </View>
@@ -187,7 +187,9 @@ function AddExpense({navigation}) {
     return (
       <TouchableOpacity
         flex={1}
-        mRight={5}
+        // mRight={5}
+        jCenter
+        aCenter
         onPress={() => handleFormAction('spentType', item)}>
         <View
           borderWidth={1}
@@ -207,9 +209,13 @@ function AddExpense({navigation}) {
   };
 
   const renderSpentType = () => (
-    <View>
+    <View flex={1}>
       <Text mBottom={5}>SPENT TYPE</Text>
-      <FlatList data={SPENT_TYPE} renderItem={renderEachSpentType} horizontal />
+      <FlatList
+        data={SPENT_TYPE}
+        renderItem={renderEachSpentType}
+        numColumns={5}
+      />
     </View>
   );
 
@@ -254,8 +260,8 @@ function AddExpense({navigation}) {
       <View vPadding={15} hPadding={15} flex={1}>
         <View flex={1}>
           {renderAmountSpent()}
-          {renderSpentTo()}
           {renderExpenceType()}
+          {renderSpentTo()}
           {renderSpentType()}
         </View>
         <View>{renderActions()}</View>
