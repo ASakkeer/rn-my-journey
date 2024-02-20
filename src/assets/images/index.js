@@ -13,6 +13,8 @@ import Shoe from './sneaker.png';
 import Cloths from './t-shirt.png';
 import ECommerce from './trolley.png';
 import Water from './water-tap.png';
+import Sending from './sending.png';
+import Receiving from './received.png';
 
 export {
   Accessory,
@@ -30,4 +32,6 @@ export {
   Cloths,
   ECommerce,
   Water,
+  Sending,
+  Receiving,
 };

@@ -21,6 +21,7 @@ import {
   PRIMARY,
   SUCCESS,
   DANGER,
+  GREY_X_LIGHT,
 } from '../../utils/colors';
 import {Navbar} from '../layout';
 import {
@@ -32,9 +33,11 @@ import {
   Gas,
   Hospital,
   Petrol,
+  Receiving,
   Recharge,
   Router,
   Savings,
+  Sending,
   Shoe,
   Trip,
   VehicleService,
@@ -187,7 +190,7 @@ function AddExpense({navigation}) {
     return (
       <TouchableOpacity
         flex={1}
-        // mRight={5}
+        mBottom={5}
         jCenter
         aCenter
         onPress={() => handleFormAction('spentType', item)}>
@@ -197,7 +200,7 @@ function AddExpense({navigation}) {
           hPadding={15}
           borderRadius={50}
           borderColor={borderColor}
-          mBottom={5}
+          mBottom={2}
           opacity={opacity}>
           <Image source={item?.source} width={30} height={30} />
         </View>
@@ -225,9 +228,19 @@ function AddExpense({navigation}) {
         backgroundColor={PRIMARY_LIGHT}
         flex={1}
         mRight={3}
+        row
+        aCenter
+        jCenter
         borderWidth={1}
-        borderColor={state?.expenseType === 'c' ? PRIMARY : GREY_LIGHT}
+        borderColor={state?.expenseType === 'c' ? PRIMARY : GREY_X_LIGHT}
         onPress={() => handleFormAction('expenseType', 'c')}>
+        <Image
+          mRight={5}
+          source={Receiving}
+          width={20}
+          height={20}
+          opacity={state?.expenseType === 'c' ? 1 : 0.5}
+        />
         <Text
           color={state?.expenseType === 'c' ? SUCCESS : GREY_LIGHT}
           textCenter>
@@ -238,9 +251,19 @@ function AddExpense({navigation}) {
         backgroundColor={PRIMARY_LIGHT}
         flex={1}
         mLeft={3}
+        row
+        aCenter
+        jCenter
         borderWidth={1}
-        borderColor={state?.expenseType === 'd' ? PRIMARY : GREY_LIGHT}
+        borderColor={state?.expenseType === 'd' ? PRIMARY : GREY_X_LIGHT}
         onPress={() => handleFormAction('expenseType', 'd')}>
+        <Image
+          mRight={5}
+          source={Sending}
+          width={20}
+          height={20}
+          opacity={state?.expenseType === 'd' ? 1 : 0.5}
+        />
         <Text
           color={state?.expenseType === 'd' ? DANGER : GREY_LIGHT}
           textCenter>

@@ -19,6 +19,7 @@ const TouchableOpacity = ({
   jCenter,
   aCenter,
   mRight,
+  mBottom,
   children,
   ...rest
 }) => {
@@ -35,6 +36,7 @@ const TouchableOpacity = ({
     jCenter && {justifyContent: 'center'},
     aCenter && {alignItems: 'center'},
     mRight && {marginRight: mRight},
+    mBottom && {marginBottom: mBottom},
     style,
   ];
 
