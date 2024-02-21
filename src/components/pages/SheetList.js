@@ -18,6 +18,12 @@ function SheetList({navigation}) {
 
   const sheetData = [
     {
+      id: 1,
+      title: 'BANK EXPENCSES',
+      description: 'Maintain my daily expenses',
+      value: '76567',
+    },
+    {
       id: 2,
       title: 'BANK EXPENCSES',
       description: 'Maintain my daily expenses',
@@ -31,6 +37,36 @@ function SheetList({navigation}) {
     },
     {
       id: 4,
+      title: 'BANK EXPENCSES',
+      description: 'Maintain my daily expenses',
+      value: '76567',
+    },
+    {
+      id: 5,
+      title: 'BANK EXPENCSES',
+      description: 'Maintain my daily expenses',
+      value: '76567',
+    },
+    {
+      id: 6,
+      title: 'BANK EXPENCSES',
+      description: 'Maintain my daily expenses',
+      value: '76567',
+    },
+    {
+      id: 7,
+      title: 'BANK EXPENCSES',
+      description: 'Maintain my daily expenses',
+      value: '76567',
+    },
+    {
+      id: 8,
+      title: 'BANK EXPENCSES',
+      description: 'Maintain my daily expenses',
+      value: '76567',
+    },
+    {
+      id: 9,
       title: 'BANK EXPENCSES',
       description: 'Maintain my daily expenses',
       value: '76567',

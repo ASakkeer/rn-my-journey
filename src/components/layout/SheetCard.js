@@ -13,6 +13,7 @@ import {
   DANGER,
   DARK,
   GREY_MEDIUM,
+  GREY_XX_LIGHT,
   GREY_X_LIGHT,
   PRIMARY,
   SUCCESS,
@@ -22,15 +23,13 @@ import {
 
 const SheetCard = React.memo(function SheetCard({
   itemData,
-  marginBottom = 10,
+  marginBottom = 5,
   setSelectedSheet,
   selectedSheet,
 }) {
   const selectTheSheet = item => {
     setSelectedSheet(item);
   };
-
-  console.log(selectedSheet, 'kjojnoj');
 
   return (
     <TouchableOpacity onPress={() => selectTheSheet(itemData)}>
@@ -66,14 +65,9 @@ const SheetCard = React.memo(function SheetCard({
 
 const styles = StyleSheet.create({
   cardContainer: {
-    borderColor: GREY_X_LIGHT,
+    borderColor: GREY_XX_LIGHT,
     backgroundColor: WHITE,
     borderRadius: 5,
-    shadowColor: GREY_MEDIUM,
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 3,
-    shadowRadius: 2,
-    elevation: 2,
   },
   userInfo: {
     marginBottom: 5,
