@@ -10,7 +10,7 @@ function ListScreen({navigation}) {
 
   const renderCreateSheetButton = () => (
     <Button onPress={() => setAddSheetModal(true)}>
-      <Text textCenter color={WHITE}>
+      <Text center color={WHITE}>
         CREATE NEW SHEET
       </Text>
     </Button>
@@ -40,7 +40,7 @@ function ListScreen({navigation}) {
 
   const renderAddExpenceButton = () => (
     <Button onPress={() => navigation?.navigate('AddExpense')}>
-      <Text textCenter color={WHITE}>
+      <Text center color={WHITE}>
         ADD EXPENSE
       </Text>
     </Button>

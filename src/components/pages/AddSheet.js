@@ -60,12 +60,12 @@ function AddSheet({showAddSheet, setAddSheetModal}) {
         flex={1}
         mRight={3}
         onPress={() => setAddSheetModal(false)}>
-        <Text color={WHITE} textCenter>
+        <Text color={WHITE} center>
           CANCEL
         </Text>
       </Button>
       <Button flex={1} mLeft={3} disabled={isSaveDisabled}>
-        <Text color={WHITE} textCenter>
+        <Text color={WHITE} center>
           SAVE
         </Text>
       </Button>

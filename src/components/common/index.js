@@ -26,6 +26,7 @@ import {
 } from './IconLibrary';
 import ModalView from './Modal';
 import TouchableOpacity from './TouchableOpacity';
+import Dropdown from './Dropdown';
 
 export {
   Button,
@@ -54,4 +55,5 @@ export {
   Zocial,
   ModalView,
   TouchableOpacity,
+  Dropdown,
 };

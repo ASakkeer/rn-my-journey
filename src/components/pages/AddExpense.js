@@ -10,6 +10,7 @@ import {
   FlatList,
   TouchableOpacity,
   KeyboardAvoidingView,
+  Dropdown,
 } from '../common';
 
 import {
@@ -152,12 +153,12 @@ function AddExpense({navigation}) {
         flex={1}
         mRight={3}
         onPress={navigateToBack}>
-        <Text color={WHITE} textCenter>
+        <Text color={WHITE} center>
           CANCEL
         </Text>
       </Button>
       <Button flex={1} mLeft={3}>
-        <Text color={WHITE} textCenter>
+        <Text color={WHITE} center>
           SAVE
         </Text>
       </Button>
@@ -204,7 +205,7 @@ function AddExpense({navigation}) {
           opacity={opacity}>
           <Image source={item?.source} width={30} height={30} />
         </View>
-        <Text fontSize={10} textCenter color={isSelected ? PRIMARY : DARK}>
+        <Text fontSize={10} center color={isSelected ? PRIMARY : DARK}>
           {item?.type}
         </Text>
       </TouchableOpacity>
@@ -241,9 +242,7 @@ function AddExpense({navigation}) {
           height={20}
           opacity={state?.expenseType === 'c' ? 1 : 0.5}
         />
-        <Text
-          color={state?.expenseType === 'c' ? SUCCESS : GREY_LIGHT}
-          textCenter>
+        <Text color={state?.expenseType === 'c' ? SUCCESS : GREY_LIGHT} center>
           RECEIVED
         </Text>
       </Button>
@@ -264,12 +263,16 @@ function AddExpense({navigation}) {
           height={20}
           opacity={state?.expenseType === 'd' ? 1 : 0.5}
         />
-        <Text
-          color={state?.expenseType === 'd' ? DANGER : GREY_LIGHT}
-          textCenter>
+        <Text color={state?.expenseType === 'd' ? DANGER : GREY_LIGHT} center>
           SENDING
         </Text>
       </Button>
+    </View>
+  );
+
+  const renderCustomDropdown = () => (
+    <View mBottom={15}>
+      <Dropdown />
     </View>
   );
 
@@ -285,6 +288,7 @@ function AddExpense({navigation}) {
           {renderAmountSpent()}
           {renderExpenceType()}
           {renderSpentTo()}
+          {renderCustomDropdown()}
           {renderSpentType()}
         </View>
         <View>{renderActions()}</View>

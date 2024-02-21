@@ -23,4 +23,6 @@ export const SUCCESS = '#43A047';
 export const WARNING = '#EF6C00';
 export const DANGER = '#E53935';
 
+export const OVERLAY = 'rgba(0, 0, 0, 0.6)';
+
 export const TRANSPARENT = 'transparent';

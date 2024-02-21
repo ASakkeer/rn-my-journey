@@ -63,7 +63,7 @@ function SheetList({navigation}) {
             mRight={3}
             backgroundColor={DARK}
             onPress={navigateToBack}>
-            <Text textCenter color={WHITE}>
+            <Text center color={WHITE}>
               CANCEL
             </Text>
           </Button>
@@ -71,7 +71,7 @@ function SheetList({navigation}) {
             <Ionicons name="add" size={18} color={WHITE} />
           </Button>
           <Button flex={1} mLeft={3} disabled={!selectedSheet}>
-            <Text textCenter color={WHITE}>
+            <Text center color={WHITE}>
               VIEW
             </Text>
           </Button>

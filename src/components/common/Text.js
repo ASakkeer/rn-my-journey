@@ -7,9 +7,10 @@ const Text = ({
   fontSize,
   fontWeight,
   color,
-  textCenter,
+  center,
   testID,
   mBottom,
+  flex,
   style,
   ...rest
 }) => {
@@ -18,8 +19,9 @@ const Text = ({
     fontSize && {fontSize},
     fontWeight && {fontWeight},
     color && {color},
-    textCenter && {textAlign: 'center'},
+    center && {textAlign: 'center'},
     testID && {testID},
+    flex && {flex},
     mBottom && {marginBottom: mBottom},
     style,
   ];

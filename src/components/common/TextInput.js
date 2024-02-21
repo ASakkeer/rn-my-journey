@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     color: DARK,
     borderRadius: 30,
-    textTransform: 'uppercase',
   },
 });
 
